@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "locale.h": "c",
+        "ex 9 - lista 6 for - taxa de crescimento criança": "cpp"
+    },
+    "C_Cpp.default.customConfigurationVariables": {
+    
+    }
+}
