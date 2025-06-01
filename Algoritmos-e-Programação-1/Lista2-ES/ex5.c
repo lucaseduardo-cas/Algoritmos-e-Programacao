@@ -1,7 +1,6 @@
 /*
 05 - Dada a base e a altura de uma pirâmide, fazer um algoritmo que calcule e escreva o seu volume.
-
-Volume = 1/3 * base * altura;
+    Volume = 1/3 * base * altura;
 */
 
 #include <stdio.h>
