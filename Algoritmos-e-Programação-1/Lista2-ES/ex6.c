@@ -15,16 +15,16 @@ A cada 3h o valor é 3,50. Se houver uma hora resto, exemplo: 5 % 3 = 2; (2 = res
 int main() {
     float valorPagar;
     int horaAbaixo, horas;
-    
+
     printf("Uso do charrete:\n");
     printf("Horas: ");
     scanf("%d", &horas);
-    
+
     horaAbaixo = horas % 3;
     horas = horas - horaAbaixo;
     valorPagar = (horas / 3 * 8.50) + (horaAbaixo * 3.50);
 
-    printf("\nValor a pagar: R$%.2f\n\n", valorPagar);
+    printf("\nValor a pagar: R$ %1.2f\n\n", valorPagar);
 
     return 0;
 }

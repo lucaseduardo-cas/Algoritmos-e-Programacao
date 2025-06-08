@@ -22,7 +22,7 @@ int main() {
     areaLata  = areaBase + areaLado;
     custoLata = areaLata * 100.0;
 
-    printf("O custo da lata de alumínimo com as dimensões %.2f x %.2f é de R$%.2f\n", raio, altura, custoLata);
+    printf("O custo da lata de alumínimo com as dimensões %.2f x %.2f é de R$ %1.2f\n", raio, altura, custoLata);
 
     return 0;
 }

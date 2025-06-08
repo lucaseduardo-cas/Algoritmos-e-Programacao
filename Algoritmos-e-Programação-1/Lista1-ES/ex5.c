@@ -7,15 +7,20 @@ a possuir o valor da variável A. OBS: Não utilize uma variável auxiliar.
 #include <stdio.h>
 
 int main () {
-    int a, b, aux;
+    int a=5, b=3;
 
     printf("Digite o valor de:\n");
     printf("  A: "); scanf("%d", &a);
     printf("  B: "); scanf("%d", &b);
 
-    aux = a;
-    a = b;
-    b = aux;
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    // ou usando XOR (apenas para inteiros) - OPERADOR BIT A BIT
+    // a = a ^ b; // 6
+    // b = a ^ b;
+    // a = a ^ b;
 
     printf("\nValor de A: %d\n", a);
     printf("Valor de B: %d\n\n", b);

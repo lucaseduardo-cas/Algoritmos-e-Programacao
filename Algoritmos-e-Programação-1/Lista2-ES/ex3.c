@@ -16,7 +16,7 @@ int main () {
     impostos *= custoFabrica;
     custoConsumidor = custoFabrica + distribuidor + impostos;
 
-    printf("\nCusto ao consumidor: R$%.2f\n\n", custoConsumidor);
+    printf("\nCusto ao consumidor: R$ %1.2f\n\n", custoConsumidor);
 
     return 0;
 }
