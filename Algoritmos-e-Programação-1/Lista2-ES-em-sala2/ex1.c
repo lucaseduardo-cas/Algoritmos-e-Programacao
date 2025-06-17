@@ -16,8 +16,6 @@ int main () {
 
     if (a + b < c) {
         printf("A soma de %d + %d é maior menor do que %d\n", a, b, c);
-    } else {
-        return 1;
     }
 
     return 0;

@@ -12,8 +12,6 @@ int main () {
 
     if (n % 2 == 0) {
         printf("%d é um número par\n", n);
-    } else {
-        return 1;
     }
 
     return 0;

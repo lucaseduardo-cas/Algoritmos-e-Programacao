@@ -15,8 +15,6 @@ int main () {
 
     if (a % b == 0) {
         printf("%d é divisível por %d\n", a, b);
-    } else {
-        return 1;
     }
 
     return 0;
