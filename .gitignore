@@ -1,7 +1,6 @@
 # Arquivos binarios executaveis (sem extensao)
 # Ignora arquivos com o mesmo nome do .c/.cpp mas sem extensao
 # Ex: para ex6.c, ignora o executavel 'ex6'
-*
 !*.c
 !*.h
 !*.cpp
