@@ -20,7 +20,6 @@
 *.out
 *.bin
 *.run
-ex*
 
 # Arquivos temporários
 *.tmp
