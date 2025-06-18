@@ -1,6 +1,4 @@
-# Arquivos binarios executaveis (sem extensao)
-# Ignora arquivos com o mesmo nome do .c/.cpp mas sem extensao
-# Ex: para ex6.c, ignora o executavel 'ex6'
+# Arquivos fonte que NÃO devem ser ignorados
 !*.c
 !*.h
 !*.cpp
@@ -9,41 +7,39 @@
 !*.s
 !*.json
 !*.pdf
-!.gitignore  # <-- ADICIONE ESTA LINHA AQUI
+!.gitignore
 
-# Arquivos de objeto gerados pelo compilador
+# Arquivos de objeto
 *.o
 *.obj
-
-# Arquivos executaveis comuns em Windows (se voce compila la)
-*.exe
-*.dll
-
-# Arquivos de depuracao (se gerados)
 *.d
 
-# Outros arquivos temporarios ou de build
-*.tmp
-*.log
+# Arquivos executáveis (Windows e Linux)
+*.exe
+*.dll
 *.out
 *.bin
+*.run
+ex*
 
-# Diretorios de saida de compilacao (se existirem)
+# Arquivos temporários
+*.tmp
+*.log
+*.bak
+*~
+
+# Diretórios de build/output
 bin/
 build/
 obj/
-output/ # Se voce tem uma pasta 'output' para executaveis
+output/
 debug/
 release/
 
-# Arquivos de configuracao do VS Code (opcional, dependendo do que voce quer versionar)
-# Voce tem pastas .vscode em subdiretorios, voce pode adicionar elas aqui se quiser ignora-las globalmente
-# .vscode/
+# Ignorar todas as .vscode (raiz e subpastas)
+.vscode/
+**/.vscode/
 
-# Arquivos relacionados a testes ou outros
+# Arquivos de testes
 *.test
 *.prof
-
-# Arquivos de backup de editor (ex: vim)
-*~
-*.bak
