@@ -18,10 +18,9 @@ Sabe-se:
 #include <stdio.h>
 #include <string.h>
 
-const float salarioMinimo = 350.00;
-const float valorHoraExtra = 10.00;
-
 int main() {
+    const float salarioMinimo = 350.00;
+    const float valorHoraExtra = 10.00;
     char nome[20];
     int qtdHorasExtras;
     float salarioHoraExtra, salarioBruto, salarioLiquido;
