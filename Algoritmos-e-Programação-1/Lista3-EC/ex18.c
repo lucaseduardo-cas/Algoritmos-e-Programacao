@@ -46,27 +46,19 @@ int main() {
 
     if (a == 'S' || a == 's') {
         precoOpcional = 1750.0;
-    } else {
-        precoOpcional = precoOpcional;
-    }
+    } 
     if (b == 'S' || b == 's') {
         precoOpcional += 800.0;
-    } else {
-        precoOpcional = precoOpcional;
-    }
-    if (c == 'S' || b == 's') {
-        precoOpcional += 1200.0;
-    } else {
-        precoOpcional = precoOpcional;
-    } if (d == 'S' || d == 's') {
-        precoOpcional += 2000.0;
-    } else {
-        precoOpcional = precoOpcional;
     } 
+    if (c == 'S' || c == 's') {
+        precoOpcional += 1200.0;
+    }  if (d == 'S' || d == 's') {
+        precoOpcional += 2000.0;
+    }
 
     precoFinal = precoInicial + precoOpcional;
 
-    printf("\nPreço final: %'.2f\n\n", precoFinal);
+    printf("\nPreço final: R$ %'.2f\n\n", precoFinal);
 
     return 0;
 }
