@@ -14,7 +14,7 @@ int main(void) {
     printf("Digite a placa do veículo: ");
     scanf("%s", placa);
     
-    int tamanho = strlen(placa);
+    int tamanho = strlen(placa); // Contar quantidade de elementos vetor char
    
     if (tamanho <= 6) {
         printf("A placa precisa ter 6 caracteres!\n\n");
