@@ -1,6 +1,6 @@
 /*
-8. Escreva um algoritmo que calcule a média dos números digitados pelo 
-usuário, se eles forem pares. Termine a leitura se o usuário digitar zero (0).
+8. Escreva um algoritmo que calcule a mï¿½dia dos nï¿½meros digitados pelo 
+usuï¿½rio, se eles forem pares. Termine a leitura se o usuï¿½rio digitar zero (0).
 */
 
 #include <stdio.h>
@@ -14,7 +14,7 @@ int main (void) {
     int i=0;
 
     while (1) {
-        printf("Digite o %d° número inteiro:\n", i + 1);
+        printf("Digite o %dï¿½ nï¿½mero inteiro:\n", i + 1);
         scanf("%d", &n);
 
         if (n == 0) {
@@ -24,7 +24,7 @@ int main (void) {
         if (n % 2 == 0) {
             soma += n;
         } else {
-            printf("\n  Número não é par!\n\n");
+            printf("\n  Nï¿½mero nï¿½o ï¿½ par!\n\n");
             system("pause");
             system("cls");
             continue;
@@ -34,7 +34,7 @@ int main (void) {
 
     media = soma / i;
 
-    printf("\nA média dos números pares digitados é: %d", media);
+    printf("\nA mï¿½dia dos nï¿½meros pares digitados ï¿½: %d", media);
     printf("\n\n\n");
 
     return 0;

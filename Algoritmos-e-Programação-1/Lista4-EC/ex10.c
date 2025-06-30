@@ -23,9 +23,41 @@ O fazendeiro, _(nome do fazendeiro)_ , pagará pelo serviço de pulverização d
 */
 
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
-    
+    char nome[20];
+    int opcao;
+    float areaPulverizada, custoFInal;
 
+    printf("============== CUSTO PULVERIZAÇÃO ==============\n\n");
+    printf("Nome do fazendeiro: ");
+    scanf("%s", nome);
+    printf("[1] - Pulverização contra ervas daninhas: R$  5,00 /acre\n");
+    printf("[2] - Pulverização contra gafanhotos ...: R$ 10,00 /acre\n");
+    printf("[3] - Pulverização contra broca ........: R$ 15,00 /acre\n");
+    printf("[4] - pulverização contra tudo acima ...: R$ 25,00 /acre\n");
+    printf("      Opção: ");
+    scanf("%d", &opcao);  
+    if (opcao < 1 || opcao > 4) {
+        printf("\nOpção inválida! Escolha uma opção entre 1 e 4.\n\n");
+        return 0;
+    } 
+
+    printf("Área a ser pulverizada: ");
+    scanf("%f", &areaPulverizada);
+    
+    if (opcao == 1) {
+        custoFInal = areaPulverizada *  5.00;
+    } else if (opcao == 2) {
+        custoFInal = areaPulverizada * 10.00;
+    } else if (opcao == 3) {
+        custoFInal = areaPulverizada * 15.00;
+    } else {
+        custoFInal = areaPulverizada * 25.00;
+    }       
+    
+    printf("O fazendeiro %s, pagará pelo serviço de pulverização R$%'.2f", nome, custoFInal);
+    printf("\n\n");
     return 0;
 }
