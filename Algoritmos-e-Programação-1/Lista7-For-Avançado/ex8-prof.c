@@ -1,6 +1,10 @@
+/*
+8. Faça um programa que leia um determinado ano e o dia da semana(1?domingo a 7-sábado)
+que iniciou o ano e imprima o calendário deste ano, de janeiro a dezembro, da seguinte
+forma(Considere o ano bisexto sendo aquele divisível por 4):
+*/
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main(void) {
     int ano, semana, diam;
@@ -18,7 +22,7 @@ int main(void) {
             case  2: printf("Feveiro de %d\n",  ano); 
                 diam = (ano % 4 == 0 && (ano % 100 != 0 || ano % 400 == 0)) ? 29 : 28;
                 break;  
-            case  3: printf("Mar�o de %d\n",    ano); diam = 31; break;
+            case  3: printf("Março de %d\n",    ano); diam = 31; break;
             case  4: printf("Abril de %d\n",    ano); diam = 30; break;
             case  5: printf("Maio de %d\n",     ano); diam = 31; break;
             case  6: printf("Junho de %d\n",    ano); diam = 30; break;
@@ -31,9 +35,9 @@ int main(void) {
             default: break; }
 
         printf(" D  S  T  Q  Q  S  S\n");
-        for (dia=1;dia <= diam; dia++){
+        for (dia = 1; dia <= diam; dia++){
             if (dia == 1){
-                for (int i=0; i < (semana-1) * 3; i++){ 
+                for (int i = 0; i < (semana - 1) * 3; i++){ 
                     printf(" ");
                 }
             }

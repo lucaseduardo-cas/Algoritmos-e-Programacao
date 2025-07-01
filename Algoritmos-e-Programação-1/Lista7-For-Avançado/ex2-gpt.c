@@ -1,53 +1,50 @@
 /*
-2. A delegacia de polícia da pequena cidade de Faina conta com somente 3 políciais: o chefe de
-polícia Zoiudo, e os policiais Zé Pequi e Jeca. Como é de se esperar, esse pequeno
-contingente de policiais não consegue atender imediatamente a todos os chamados policiais.
-Portanto, você foi contratado para criar um sistema de atendimento, de maneira que cada um
+2. A delegacia de polÃ­cia da pequena cidade de Faina conta com somente 3 polÃ­ciais: o chefe de
+polÃ­cia Zoiudo, e os policiais ZÃ© Pequi e Jeca. Como Ã© de se esperar, esse pequeno
+contingente de policiais nÃ£o consegue atender imediatamente a todos os chamados policiais.
+Portanto, vocÃª foi contratado para criar um sistema de atendimento, de maneira que cada um
 dos policiais fique com um conjunto equilibrado de chamados. Considere os requisitos:
-- Cada ocorrência deve ser de um tipo: Direção Perigosa, Barulho, Bebedeira, Briga;
-- Cada ocorrência deve ser de um nível de gravidade: Baixo, Médio, Alto;
-- Toda ocorrência do tipo Briga tem nível de gravidade alto;
-- Novas ocorrências devem ser atribuídas ao policial com menos ocorrências;
-- Ocorrências do tipo Briga sempre são atribuídas ao chefe de polícia;
-- A cada registro de ocorrência o sistema deve imprimir um resumo da quantidade de
-ocorrências de cada policial, o número de ocorrências do tipo Briga e o percentual de
-ocorrências do tipo “Direção Perigosa” em relação do total de ocorrências cadastradas.
+- Cada ocorrÃªncia deve ser de um tipo: DireÃ§Ã£o Perigosa, Barulho, Bebedeira, Briga;
+- Cada ocorrÃªncia deve ser de um nÃ­vel de gravidade: Baixo, MÃ©dio, Alto;
+- Toda ocorrÃªncia do tipo Briga tem nÃ­vel de gravidade alto;
+- Novas ocorrÃªncias devem ser atribuÃ­das ao policial com menos ocorrÃªncias;
+- OcorrÃªncias do tipo Briga sempre sÃ£o atribuÃ­das ao chefe de polÃ­cia;
+- A cada registro de ocorrÃªncia o sistema deve imprimir um resumo da quantidade de
+ocorrÃªncias de cada policial, o nÃºmero de ocorrÃªncias do tipo Briga e o percentual de
+ocorrÃªncias do tipo â€œDireÃ§Ã£o Perigosaâ€ em relaÃ§Ã£o do total de ocorrÃªncias cadastradas.
 
-- Resumo da quantidade e ocorrências de cada policial; 
-- Número de ocorrências do tipo briga; [V]
-- Percentual de ocorrências do tipo "Direção Perigosa" em relação ao TOTAL de ocorrências cadastradas; [V]
+- Resumo da quantidade e ocorrÃªncias de cada policial; 
+- NÃºmero de ocorrÃªncias do tipo briga; [V]
+- Percentual de ocorrÃªncias do tipo "DireÃ§Ã£o Perigosa" em relaÃ§Ã£o ao TOTAL de ocorrÃªncias cadastradas; [V]
 */
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main(void) {
-    setlocale(LC_ALL, "Portuguese");
-
     int tipo_ocorrencia, qtd_ocorrencia = 0, qtd_tipo_briga = 0;
     int direcao_perigosa = 0, barulho = 0, bebedeira = 0, briga = 0;
     int zoiudo = 0, ze_pequi = 0, jeca = 0;
     float percent_dir_perigosa;
 
     while (1) {
-        printf("Selecione o tipo de ocorrência: (0 p/ finalizar)\n");
-        printf("    [1] Direção Perigosa\n");
+        printf("Selecione o tipo de ocorrÃªncia: (0 p/ finalizar)\n");
+        printf("    [1] DireÃ§Ã£o Perigosa\n");
         printf("    [2] Barulho\n");
         printf("    [3] Bebedeira\n");
-        printf("    [4] Briga\nOpção: ");
+        printf("    [4] Briga\nOpÃ§Ã£o: ");
         scanf("%d", &tipo_ocorrencia);
 
         if (tipo_ocorrencia == 0) {
-            printf("    Operação finalizada!\n\n");
+            printf("    OperaÃ§Ã£o finalizada!\n\n");
             break;
         }
 
         if (tipo_ocorrencia < 1 || tipo_ocorrencia > 4) {
-            printf("    Opção inválida!\n\n");
+            printf("    OpÃ§Ã£o invÃ¡lida!\n\n");
             continue;
         }
 
-        // Atualiza as contagens dos tipos de ocorrência
+        // Atualiza as contagens dos tipos de ocorrÃªncia
         if (tipo_ocorrencia == 1) direcao_perigosa++;
         else if (tipo_ocorrencia == 2) barulho++;
         else if (tipo_ocorrencia == 3) bebedeira++;
@@ -55,9 +52,9 @@ int main(void) {
 
         qtd_ocorrencia++;
 
-        // Distribui as ocorrências entre os policiais
+        // Distribui as ocorrÃªncias entre os policiais
         if (tipo_ocorrencia == 4) {
-            zoiudo++; // Ocorrências de briga sempre para Zoiudo
+            zoiudo++; // OcorrÃªncias de briga sempre para Zoiudo
             qtd_tipo_briga++;
         } else {
             if (zoiudo <= ze_pequi && zoiudo <= jeca) {
@@ -72,15 +69,14 @@ int main(void) {
         percent_dir_perigosa = (direcao_perigosa * 100.0) / qtd_ocorrencia;
 
         // Exibe o resumo
-        printf("\nResumo das ocorrências:\n");
-        printf("Policial Zoiudo: %d ocorrências\n", zoiudo);
-        printf("Policial Zé Pequi: %d ocorrências\n", ze_pequi);
-        printf("Policial Jeca: %d ocorrências\n", jeca);
-        printf("Ocorrências do tipo Briga: %d\n", qtd_tipo_briga);
-        printf("Percentual de Direção Perigosa: %.2f%%\n\n", percent_dir_perigosa);
+        printf("\nResumo das ocorrÃªncias:\n");
+        printf("Policial Zoiudo: %d ocorrÃªncias\n", zoiudo);
+        printf("Policial ZÃ© Pequi: %d ocorrÃªncias\n", ze_pequi);
+        printf("Policial Jeca: %d ocorrÃªncias\n", jeca);
+        printf("OcorrÃªncias do tipo Briga: %d\n", qtd_tipo_briga);
+        printf("Percentual de DireÃ§Ã£o Perigosa: %.2f%%\n\n", percent_dir_perigosa);
     }
 
-    system("Pause");
     return 0;
 }
 
