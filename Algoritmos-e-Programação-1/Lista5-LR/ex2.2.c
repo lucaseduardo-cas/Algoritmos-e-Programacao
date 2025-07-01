@@ -1,16 +1,13 @@
 /*
-Faça um programa para exibir os quadrados dos números inteiros de 
+EXEMPLO PROFESSOR:
+
+FaÃ§a um programa para exibir os quadrados dos nï¿½meros inteiros de 
 15 a 200.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <locale.h>
 
 int main(void) {
-	setlocale(LC_ALL, "Portuguese");
-	
 	int n=15, q=0;
 	
 	while (n <= 200) {
@@ -19,7 +16,5 @@ int main(void) {
 		n++;	
 	}
 	
-system("Pause");
-return 0;
-
+	return 0;
 }

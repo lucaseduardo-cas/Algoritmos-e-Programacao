@@ -1,38 +1,39 @@
+/*
+10. Desenvolver um algoritmo e um programa em C que leia a altura e o sexo (M ou F) de 15 pessoas. Este
+programa dever√° calcular e mostrar :
+	a. A menor altura do grupo;
+	b. A m√©dia de altura das mulheres;
+	c. O n√∫mero de homens;
+	d. O sexo da pessoa mais alta 
+*/
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main(void) {
-	setlocale (LC_ALL, "Portuguese");
-	
 	char sexo, sexo_mais_alto;
 	float altura;
 	float menor_altura_total, maior_altura_total;
-	float media_altura_m, soma_media_m, total_homens;
-	int i=1, j=1, m=0, f=0; // Vari·veis de controle
+	float media_altura_m=0.0, soma_media_m=0.0;
+	int i=1, j=1, m=0, f=0; // Vari√°veis de controle
 		
 	do {
-	printf("Digite a altura da %d∞ pessoa: ", i);
+	printf("Altura da %d¬∞ pessoa ............. : ", i);
 	scanf("%f", &altura);
-	
 	if (altura < 0.50 || altura > 2.60) {
-		printf("    Altura inv·lida! Digite uma altura entre 0,50m e 2,60m\n\n");
+		printf("    Altura inv√°lida! Digite uma altura entre 0,50m e 2,60m\n\n");
 		continue;
 	}
-	
-	printf("Digite o sexo da %d∞ pessoa [M] ou [F]: ", i);
+	printf("Sexo da %d¬∞ pessoa [M] ou [F] .... : ", i);
 	scanf(" %c", &sexo);
-	
-		if (sexo == 'M') { // Sexo masculino
-			printf("    Homem\n    %.2f\n\n", altura, sexo);
+		if (sexo == 'M' || sexo == 'm') { // Sexo masculino
+			printf("    Homem\n    %.2f\n\n", altura);
 			m++;
-		} else if (sexo == 'F') { // Sexo feminino
-			printf("    Mulher\n    %.2f\n\n", altura, sexo);
+		} else if (sexo == 'F' || sexo == 'f') { // Sexo feminino
+			printf("    Mulher\n    %.2f\n\n", altura);
 			soma_media_m += altura;
 			f++;
-			media_altura_m = soma_media_m / f;
 		} else {
-			printf("\nSexo inv·lido!\n\n");
+			printf("\nSexo inv√°lido!\n\n");
 			continue;
 		}	
 		
@@ -41,23 +42,24 @@ int main(void) {
 			menor_altura_total = altura;
 			maior_altura_total = altura;
 			j = 0;
-		} if (altura < menor_altura_total) {
-			menor_altura_total = altura;
-		} else if (altura > maior_altura_total) {
+		} 
+		if (altura > maior_altura_total) {
+			maior_altura_total = altura;
 			sexo_mais_alto = sexo; // Calcula o sexo mais alto
 		}
-	
-	i++;
-	
+		if (altura < menor_altura_total) {
+			menor_altura_total = altura;
+		} 
+		i++;
 	} while (i > 0 && i <= 15);
+	
+	// Calcula m√©dia de altura das mulheres
+	media_altura_m = soma_media_m / f;
 
 	printf("Menor altura do grupo: %.2f\n", menor_altura_total);
-	printf("MÈdia de altura das mulheres: %.2f\n", media_altura_m);
-	printf("N˙mero de homens: %d\n", m);
+	printf("M√©dia de altura das mulheres: %.2f\n", media_altura_m);
+	printf("N√∫mero de homens: %d\n", m);
 	printf("Sexo da pessoa mais alta: %c", sexo_mais_alto);
-	printf("\n\n\n");
-	
-system("Pause");
-return 0;
-
+	printf("\n\n");
+	return 0;
 }

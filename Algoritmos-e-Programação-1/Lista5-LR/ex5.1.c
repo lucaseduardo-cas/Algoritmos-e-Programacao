@@ -1,19 +1,19 @@
-/*O máximo divisor comum de dois inteiros é o maior número que divide ambos sem deixar resto. Escreva
-um programa que lê dois inteiros e calcula o seu máximo divisor comum.*/
+/*
+RESOLUÃ‡ÃƒO PROFESSOR
+
+O mÃ¡ximo divisor comum de dois inteiros Ã© o maior nÃºmero que divide ambos sem deixar resto. Escreva
+um programa que lÃª dois inteiros e calcula o seu mÃ¡ximo divisor comum. 
+*/
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main(void) {
-    setlocale(LC_ALL, "Portuguese");
-    
     int i, a, b, mdc=0;
     
- 	printf("Primeiro número: ");
-    	scanf("%d", &a);
-   	printf("Segundo número: ");
-   		scanf("%d", &b);
+ 	printf("Primeiro nÃºmero: ");
+    scanf("%d", &a);
+   	printf("Segundo nÃºmero: ");
+   	scanf("%d", &b);
     	
     i = 1;	
     while (i <= a && i <= b) {
@@ -23,10 +23,7 @@ int main(void) {
     	i++;
 	}
   
-  	printf("\nMDC %d, %d = %d\n\n\n", a, b, mdc);
-  	
-system("Pause");
-return 0;
-
+  	printf("\nMDC %d, %d = %d\n\n\n", a, b, mdc);	
+	return 0;
 }
 
