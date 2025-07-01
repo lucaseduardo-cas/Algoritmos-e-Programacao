@@ -1,22 +1,18 @@
 /*
-5) Faça um programa que peça ao usuário 2 números inteiros e mostre na tela todos os números
+5) FaÃ§a um programa que peÃ§a ao usuÃ¡rio 2 nÃºmeros inteiros e mostre na tela todos os nÃºmeros
 entre eles.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main (void) {
-    setlocale (LC_ALL, "Portuguese");
-
     int n1, n2, i;
 
     while (1) {
         printf("Digite dois nï¿½meros inteiros: \n");
-        printf("1ï¿½ Nï¿½mero: ");
+        printf("1Â° NÃºmero: ");
         scanf("%d", &n1);
-        printf("2ï¿½ Nï¿½mero: ");
+        printf("2Â° NÃºmero: ");
         scanf("%d", &n2);
         printf("\n");
 
@@ -36,6 +32,5 @@ int main (void) {
         }
     }
 
-    system("Pause");
     return 0;
 }

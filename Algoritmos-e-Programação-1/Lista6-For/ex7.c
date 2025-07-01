@@ -1,17 +1,13 @@
 /*
-7) Um trabalhador quer fazer uma poupanÁa para a sua aposentadoria e para isso ele ir·
-guardar 3% de seu sal·rio pelos exatos 25 anos que ele tem de trabalho pela frente. Sabendo
-que ele recebe um reajuste de 5% ao ano, faÁa um programa que peÁa ao usu·rio o valor do
-sal·rio atual e calcule quanto ele ir· juntar se seguir o plano.
+7) Um trabalhador quer fazer uma poupan√ßa para a sua aposentadoria e para isso ele ir√°
+guardar 3% de seu sal√°rio pelos exatos 25 anos que ele tem de trabalho pela frente. Sabendo
+que ele recebe um reajuste de 5% ao ano, fa√ßa um programa que pe√ßa ao usu√°rio o valor do
+sal√°rio atual e calcule quanto ele ir√° juntar se seguir o plano.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main (void) {
-    setlocale (LC_ALL, "Portuguese");
-
     float salario_atual, salario_guardado, total_guardado, reajuste_anual;
     int i, j;
 
@@ -20,7 +16,7 @@ int main (void) {
             break;
         }
         printf("0 p/ sair\n");
-        printf("Digite o sal·rio atual: ");
+        printf("Digite o sal√°rio atual: ");
         printf("R$");
         scanf("%f", &salario_atual);
 
@@ -34,9 +30,8 @@ int main (void) {
             }
             reajuste_anual += reajuste_anual * 0.05;
         }
-        printf("\n\nTotal guardado apÛs %d anos: R$%.2f\n\n\n", i-1, total_guardado);    
+        printf("\n\nTotal guardado ap√≥s %d anos: R$%.2f\n\n\n", i-1, total_guardado);    
     }
 
-    system("Pause");
     return 0;
 }

@@ -1,5 +1,5 @@
 /*
-6) Escreva um programa que lê o tamanho do lado de um quadrado e imprime um quadrado
+6) Escreva um programa que lÃª o tamanho do lado de um quadrado e imprime um quadrado
 daquele tamanho com asteriscos.
 Por exemplo, para lado igual a 5:
 *****
@@ -10,12 +10,8 @@ Por exemplo, para lado igual a 5:
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main (void) {
-    setlocale (LC_ALL, "Portuguese");
-
     int n, i, j;
 
     printf("Lado do quadrado: ");
@@ -28,6 +24,5 @@ int main (void) {
         printf("\n");
     }
 
-    system("Pause");
     return 0;
 }

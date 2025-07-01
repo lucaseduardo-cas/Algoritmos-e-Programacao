@@ -1,18 +1,14 @@
 /*
-2) Peça ao usuário um número inteiro e mostre na tela a tabuada de 1 a 10.
+2) PeÃ§a ao usuÃ¡rio um nÃºmero inteiro e mostre na tela a tabuada de 1 a 10.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main (void) {
-    setlocale (LC_ALL, "Portuguese_Brazil.1252");
-
     int i, n, x;
 
     while (1) {
-        printf("Digite um número inteiro: ");
+        printf("Digite um nÃºmero inteiro: ");
         scanf("%d", &n);
 
         if (n != 0) {
@@ -25,7 +21,6 @@ int main (void) {
         }
         printf("\n");
     }
-    
-    system("Pause");
+
     return 0;
 }

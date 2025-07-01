@@ -1,18 +1,14 @@
 /*
-8) Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são pares.
+8) Escreva um algoritmo que leia 20 nÃºmeros do usuÃ¡rio e exiba quantos nÃºmeros sÃ£o pares.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
 int main (void) {
-    setlocale (LC_ALL, "Portuguese");
-
     int n, p, i;
 
     for (i=1; i<=10; i++) {
-        printf("Digite o %d° número: ", i);
+        printf("Digite o %dÂ° nÃºmero: ", i);
         scanf("%d", &n);
 
         if (n % 2 == 0) {
@@ -20,8 +16,7 @@ int main (void) {
         }
     }
 
-    printf("\n\n%d números são pares.\n\n", p);
+    printf("\n\n%d nÃºmeros sÃ£o pares.\n\n", p);
 
-    system("Pause");
     return 0;
 }
