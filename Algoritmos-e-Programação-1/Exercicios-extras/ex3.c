@@ -9,7 +9,7 @@ inteiros	e:
 #include <stdio.h>
 
 int main(void) {
-    int maiorValor=-1, menorValor=9999999, soma=0, media;
+    int maiorValor=-999999999, menorValor=999999999, soma=0, media;
     int n;
     int i=0;
 
