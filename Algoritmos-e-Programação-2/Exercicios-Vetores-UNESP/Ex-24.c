@@ -8,13 +8,13 @@ com suas alturas.
 #include <stdio.h>
 
 int main(void) {
-    int matricula[3];
+    int matricula[10];
     int matriculaAlunoMaisAlto, matriculaAlunoMaisBaixo, validacao=1;
     float alunoMaisAlto=-10000, alunoMaisBaixo=10000;
-    float altura[3];
+    float altura[10];
     int i, j;
 
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 10; i++) {
         while(1) {
             printf("Matrícula do %d° aluno (4 dígitos) .... : ", i + 1);
             scanf("%d", &matricula[i]);
@@ -39,9 +39,17 @@ int main(void) {
                 continue;
             }
         }
-        printf("Altura do %d° aluno ................... : ", i + 1);
-        scanf("%f", &altura[i]);
-        printf("\n");
+        while(1) {
+            printf("Altura do %d° aluno ................... : ", i + 1);
+            scanf("%f", &altura[i]);
+            printf("\n");
+            if (altura[i] < 0.50 || altura[i] > 2.50) {
+                printf("\nAltura inválida! Digite uma altura entre 0.50m e 2.50m\n");
+                continue;
+            } else {
+                break;
+            }
+        }
 
         if (alunoMaisAlto < altura[i]) {
             alunoMaisAlto = altura[i];
