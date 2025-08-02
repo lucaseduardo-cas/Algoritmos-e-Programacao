@@ -1,3 +1,6 @@
+/*
+MATRIZES EM FUNÇÃO
+*/
 #include <stdio.h>
 
 void imprime(int m[][4], int n) {
