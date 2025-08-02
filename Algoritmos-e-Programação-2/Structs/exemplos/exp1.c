@@ -58,9 +58,9 @@ int main(void) {
     fgets(pes.nome, TAM, stdin);
 
     printf("\nAlterando com dados do usuário:\n");
-    printf("pes.idade: %d\n", pes.idade);
-    printf("pes.peso: %.2f\n", pes.peso);
-    printf("pes.nome: %s\n", pes.nome);
+    printf("\tpes.idade: %d\n", pes.idade);
+    printf("\tpes.peso: %.2f\n", pes.peso);
+    printf("\tpes.nome: %s\n", pes.nome);
 
     return 0;
 }
