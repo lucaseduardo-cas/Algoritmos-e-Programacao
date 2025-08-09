@@ -2,20 +2,20 @@
 #include <stdlib.h>
 #include <locale.h>
 
-// FunÁ„o para exibir o tabuleiro no formato desejado
+// Fun√ß√£o para exibir o tabuleiro no formato desejado
 
 void escolher_simbolo(char *opcao) {
     while(1) {
         system("cls");
         printf("==================== JOGO DA VELHA ====================\n");
-        printf("\nEscolha seu sÌmbolo:\n");
+        printf("\nEscolha seu s√≠mbolo:\n");
         printf("  [X]\n");
         printf("  [O]\n");
-        printf("\nOpÁ„o: ");
+        printf("\nOp√ß√£o: ");
         scanf(" %c", opcao);
 
         if (*opcao != 'x' && *opcao != 'X' && *opcao != 'o' && *opcao != 'O' && *opcao != '0') {
-            printf("CaractÈr inv·lido!\n\n");
+            printf("Caract√©r inv√°lido!\n\n");
             system("pause");
             continue;
         } else {
@@ -50,7 +50,7 @@ int exibir_vencedor(char opcao, char grade[3][3]) {
         ((opcao == grade[0][2]) && (opcao == grade[1][2]) && (opcao == grade[2][2])) ||
         ((opcao == grade[0][0]) && (opcao == grade[1][1]) && (opcao == grade[2][2])) ||
         ((opcao == grade[0][2]) && (opcao == grade[1][1]) && (opcao == grade[2][0]))) {     
-        printf("\nFim de jogo! (%c) È o vencedor.\n\n", (opcao == 'X') ? 'X' : 'O');
+        printf("\nFim de jogo! (%c) √© o vencedor.\n\n", (opcao == 'X') ? 'X' : 'O');
 
         return 1;
     } else {
@@ -70,9 +70,9 @@ int main (void) {
     
     escolher_simbolo(&opcao);
 
-    // Escolha do sÌmbolo
+    // Escolha do s√≠mbolo
     do {  
-        // Normalizando a opÁ„o escolhida  
+        // Normalizando a op√ß√£o escolhida  
         opcao = (opcao == 'x' || opcao == 'X') ? 'X' : 'O';  
 
         // Escolha da coordenada
@@ -82,8 +82,8 @@ int main (void) {
         // Validando dados Linha
         while(1) {
             printf("Linha  (1, 2, 3): ");
-            if (scanf(" %d", &coordenadaNumero) != 1) {  // Verifica se a entrada N√O È um n˙mero
-                printf("\nLinha inv·lida!\n\n");
+            if (scanf(" %d", &coordenadaNumero) != 1) {  // Verifica se a entrada N√ÉO √© um n√∫mero
+                printf("\nLinha inv√°lida!\n\n");
                 system("pause");
                 exibir_cabecalho(opcao);
                 exibir_tabuleiro(grade); 
@@ -92,7 +92,7 @@ int main (void) {
             }
 
             if (coordenadaNumero != 1 && coordenadaNumero != 2 && coordenadaNumero != 3) {
-                printf("\nLinha inv·lida!\n\n");
+                printf("\nLinha inv√°lida!\n\n");
                 //exibir_cabecalho(opcao);
                 //exibir_tabuleiro(grade); 
                 continue;
@@ -109,7 +109,7 @@ int main (void) {
             if (coordenadaLetra != 'a' && coordenadaLetra != 'A' &&
                 coordenadaLetra != 'b' && coordenadaLetra != 'B' &&
                 coordenadaLetra != 'c' && coordenadaLetra != 'C') {
-                printf("\nColuna inv·lida!\n\n");
+                printf("\nColuna inv√°lida!\n\n");
                 system("pause");
                 exibir_cabecalho(opcao);
                 exibir_tabuleiro(grade); 
@@ -123,12 +123,12 @@ int main (void) {
             }
         }
 
-        // Verifica se a posiÁ„o est· vazia antes de atribuir 
+        // Verifica se a posi√ß√£o est√° vazia antes de atribuir 
         if (grade[i][j] != ' ') {  
-            printf("\nEssa posiÁ„o j· est· ocupada! Escolha outra.\n");  
+            printf("\nEssa posi√ß√£o j√° est√° ocupada! Escolha outra.\n");  
             system("pause");  
             continue;  
-        } else { // Confirma a coordenada escolhida pelo usu·rio
+        } else { // Confirma a coordenada escolhida pelo usu√°rio
             grade[i][j] = opcao;
             exibir_cabecalho(opcao);
             exibir_tabuleiro(grade); 
@@ -154,7 +154,7 @@ int main (void) {
             return 0;
         }
 
-        // Alterna a opÁ„o a cada jogada.
+        // Alterna a op√ß√£o a cada jogada.
         opcao = (opcao == 'X') ? 'O' : 'X'; 
 
     } while(1);
