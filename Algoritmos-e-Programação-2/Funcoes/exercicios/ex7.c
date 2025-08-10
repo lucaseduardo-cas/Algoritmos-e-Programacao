@@ -4,18 +4,13 @@ Enunciado:
 Crie um programa em C que declare duas variáveis inteiras no main. Crie uma função chamada trocarValores que receba os endereços de memória dessas duas variáveis como parâmetros. Dentro da função trocarValores, troque os valores das duas variáveis. No main, chame a função trocarValores e, em seguida, chame uma função exibirValores para imprimir os valores das variáveis, demonstrando que a troca realmente ocorreu.
 
 Funções a criar:
-
-void trocarValores(int *a, int *b): Recebe dois ponteiros para inteiros e troca os valores que eles apontam.
-
-void exibirValores(int a, int b): Recebe dois inteiros e os exibe na tela.
+- void trocarValores(int *a, int *b): Recebe dois ponteiros para inteiros e troca os valores que eles apontam.
+- void exibirValores(int a, int b): Recebe dois inteiros e os exibe na tela.
 
 Conceitos a praticar:
-
-Ponteiros como parâmetros de funções.
-
-Passagem por referência para modificar valores.
-
-Desreferenciação de ponteiros (*).
+- Ponteiros como parâmetros de funções.
+- Passagem por referência para modificar valores.
+- Desreferenciação de ponteiros (*).
 */
 
 #include <stdio.h>

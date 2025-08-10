@@ -11,7 +11,7 @@ Obs.: Structs é muito utilizado com lista de vetores, não com variáveis simpl
 
 #define TAM 50 // Constante do tamanho 50
 
-// Define o tipo de dado struct
+// Define o tipo de dado struct (Declaração Separada)
 struct tipo_pessoa {
     int idade;
     float peso;

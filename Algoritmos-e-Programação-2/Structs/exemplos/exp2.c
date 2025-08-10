@@ -5,13 +5,14 @@
 
 #define TAM 3
 
-struct tipo_pessoa {
+// (Declaração Unificada)
+typedef struct tipo_pessoa {
     int idade;
     float peso;
     char nome[50];
-};
+} tipo_pessoa;
 
-typedef struct tipo_pessoa tipo_pessoa;
+// typedef struct tipo_pessoa tipo_pessoa;
 
 void limparBuffer() {
     int c;
