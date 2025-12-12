@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/lucas/Documentos/Meu computador/UEG-SI/Linguagens/C/Algoritmos-e-Programacao/Algoritmos-e-Programação-2/Structs/exercicios",
+      "program": "/home/lucas/Documentos/Meu computador/UEG-SI/Linguagens/C/Algoritmos-e-Programacao/Algoritmos-e-Programação-2/Structs/exercicios/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
